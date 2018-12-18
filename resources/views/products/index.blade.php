@@ -5,7 +5,7 @@
             <div class="pull-left">
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="/products/create"> Create New Product</a>
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@
             <td>
                 <form action="{{ route('products.destroy',$product->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
+                    <a class="btn btn-info" href="/products/{{$product->id}}/show">Show</a>
    
                     <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
    

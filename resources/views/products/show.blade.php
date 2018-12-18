@@ -21,8 +21,24 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Details:</strong>
-                {{ $product->detail }}
+                <strong>Description:</strong>
+                {{ $product->description }}
+            </div>
+            <div class="form-group">
+                <strong>Category:</strong>
+                {{ $product->category }}
+            </div>
+            <div class="form-group">
+                <strong>Price:</strong>
+                {{ $product->price }}
+            </div>
+            <div class="form-group">
+                <strong>Created at:</strong>
+                {{ $product->created_at }}
+            </div>
+            <div class="form-group">
+                <strong>Last update:</strong>
+                {{ $product->updated_at }}
             </div>
         </div>
     </div>

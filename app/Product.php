@@ -11,7 +11,7 @@ class Product extends Model
 
     protected $table = 'products';
     protected $primaryKey = 'id';
-    protected $fillable = ['id','name', 'description', 'price' ];
+    protected $fillable = ['id','name', 'description', 'price', 'created_at','updated_at' ];
 
 
     public function order()

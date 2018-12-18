@@ -5,7 +5,7 @@
             <div class="pull-left">
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('orders.create') }}"> Create New Request</a>
+                <a class="btn btn-success" href="/orders/create"> Create New Request</a>
             </div>
         </div>
     </div>

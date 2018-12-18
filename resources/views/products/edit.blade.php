@@ -25,8 +25,7 @@
   
     <form action="{{ route('products.update',$product->id) }}" method="POST">
         {{ csrf_field() }}
-        @method('PUT')
-   
+        {{method_field('PUT')}}   
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
@@ -37,7 +36,15 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Detail:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail">{{ $product->detail }}</textarea>
+                    <textarea class="form-control" style="height:150px" name="description" placeholder="Description">{{ $product->description }}</textarea>
+                </div>
+                <div class="form-group">
+                    <strong>Category:</strong>
+                    <input type="text" name="category" value="{{ $product->category }}" class="form-control" placeholder="Category">
+                </div>
+                <div class="form-group">
+                    <strong>Price:</strong>
+                    <input type="text" name="price" value="{{ $product->price }}" class="form-control" placeholder="Price">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
