@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Order;
 use App\Http\Resources\OrderResource;
 use DB;
+use App\Http\Requests\ArticleRequest;
 
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Input;
@@ -35,34 +36,26 @@ class OrderController extends Controller {
         return Response::json($orders);
     }
 
-    public function showOrders(){
 
-        // $order = new Order();
-        //   $response = $order->get('http://localhost:8000/api/orders/');
-     
-        //      $body = $response->getBody()->getContents();
-             $orders = json_decode('http://localhost:8000/api/orders/');
-             return view("orders.index", ['orders'=>$orders]);
-     
-     
+
+        public function showOrders(){
+            $orders = Order::all();
+            return view("orders.index", ['orders'=>$orders]);     
      }
      
-    public function store() {
-        $input = Input::all();
+    public function store(ArticleRequest $request) {
+        $input = $request->all();
+        // $input = Input::all();
         $order = new Order;
 
-        if ( $input['order_id'] ) {
             $order->order_id =$input['order_id'];
-        }
-        if ( $input['prod_id'] ) {
+
             $order->prod_id =$input['prod_id'];
-        }
-        if ( $input['user_id'] ) {
+        
             $order->user_id =$input['user_id'];
-        }
-        if ( $input['quantity'] ) {
+        
             $order->quantity =$input['quantity'];
-        }
+        
 
         $order->save();
 

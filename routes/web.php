@@ -21,7 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products', 'ProductController@showProducts')->name('products');
-Route::get('/order', 'OrderController@showOrders')->name('order');
+Route::get('/products/create', function(){
+    return view('products.create');
+});
+Route::get('/orders', 'OrderController@showOrders')->name('orders');
 
 // Route::get('/order', 'RequestController@index')->name('order');
 

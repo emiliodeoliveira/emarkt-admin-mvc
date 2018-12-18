@@ -7,7 +7,7 @@
                 <h2>eMarkt</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('order.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('orders.create') }}"> Create New Product</a>
             </div>
         </div>
     </div>
@@ -25,19 +25,19 @@
             <th>Quantity</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($order as $request)
+        @foreach ($order as $orders)
         <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $request->product }}</td>
             <td>{{ $request->quantity }}</td>
             <td>
-                <form action="{{ route('order.destroy',$request->id) }}" method="POST">
+                <form action="{{ route('orders.destroy',$request->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('order.show',$request->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('orders.show',$request->id) }}">Show</a>
 
  
     
-                    <a class="btn btn-primary" href="{{ route('order.edit',$request->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('orders.edit',$request->id) }}">Edit</a>
    
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}      

@@ -24,10 +24,8 @@
             <th>Price</th>
             <th width="280px">Action</th>
         </tr>
-        <tbody>
 
         @foreach($products as $product)
-        <!-- @foreach($products as $product) -->
         <tr>
             <td>{{$product->id}}</td>
             <td>{{$product->name}}</td>
@@ -47,10 +45,8 @@
             </td>
         </tr>
         @endforeach
-        </tbody>
 
     </table>
   
-    {!! $products->links() !!}
       
 @endsection

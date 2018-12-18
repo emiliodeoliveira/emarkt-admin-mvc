@@ -73,7 +73,7 @@
         <li><a href="{{ route('products') }}"><span>Products</span></a></li>
 -->
         <li><a href="{{ route('products') }}"><span>Products</span></a></li>
-        <li><a href="{{ route('order') }}"> <span>Order</span></a></li>
+        <li><a href="{{ route('orders') }}"> <span>Order</span></a></li>
         <li><a href="#"></i> <span>Categories</span></a></li>
 
         @can('isAdmin')

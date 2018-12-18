@@ -36,14 +36,8 @@ class ProductController extends Controller {
     }
 
     public function showProducts(){
-
-        // $product = new Product();
-        //   $response = $product->get('http://localhost:8000/api/products/');
-     
-        //      $body = $response->getBody()->getContents();
-             $products = json_decode('http://localhost:8000/api/products/');
-             return view("products.index", ['products'=>$products]);
-     
+        $products = Product::all();
+        return view("products.index", ['products'=>$products]);
      
      }
 
