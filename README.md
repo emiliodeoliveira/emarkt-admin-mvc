@@ -1,7 +1,7 @@
 # emarkt-admin-mvc
 Basic CRUD Operation with Laravel
 
-## What's this repo about
+## What's this repo contains
 
 A basic create, read, update and delete operation with Laravel 5.5 and Bootstrap modal window to create,update and delete data. 
 
