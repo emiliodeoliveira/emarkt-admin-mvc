@@ -1,9 +1,9 @@
 # emarkt-admin-mvc
-Basic CRUD Operation with Laravel
+Basic CRUD Operation with Laravel.
 
-## What's this repo contains
+## What is eMarkt Admin MVC?
 
-A basic create, read, update and delete operation with Laravel 5.5 and Bootstrap modal window to create,update and delete data. 
+A basic CRUD + MVC made with Laravel 5.5 and Bootstrap .
 
 ## Requirements 
 
